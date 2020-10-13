@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1767dfa8bc3b43449808673e52cae0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stamina: 0
+  stamina: 10
   metal: 0
   energy: 0
   fuel: 0
@@ -359,12 +359,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   player: {fileID: 240228970}
+  searchRNGMinimum: 0.3
+  searchRNGMaximum: 0.7
   primaryResource: Metal
   primaryStock: 0
-  primaryStockRate: 0
+  primaryStockRefill: 0
+  primaryBaseFindRate: 10
   rareResource: {fileID: 0}
   rareStock: 0
-  rareStockRate: 0
+  rareStockRefill: 0
 --- !u!4 &606740891
 Transform:
   m_ObjectHideFlags: 0

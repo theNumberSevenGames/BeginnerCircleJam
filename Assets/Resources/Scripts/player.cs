@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class Player : MonoBehaviour
 {
    
    public int stamina;
@@ -22,12 +22,17 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(stamina);
+
     }
 
     public void restoreStamina(int amount)
     {
         this.stamina += amount;
+    }
+
+    public void reduceStamina(int amount)
+    {
+        this.stamina -= amount;
     }
 
     public void increaseDefense(int amount)
@@ -48,6 +53,22 @@ public class player : MonoBehaviour
         else if(type == "Fuel")
         {
             this.fuel += amount;
+        }
+    }
+
+    public void reduceResources(string type, int amount)
+    {
+        if(type == "Metal")
+        {
+            this.metal -= amount;
+        }
+        else if(type == "Energy")
+        {
+            this.energy -= amount;
+        }
+        else if(type == "Fuel")
+        {
+            this.fuel -= amount;
         }
     }
 }

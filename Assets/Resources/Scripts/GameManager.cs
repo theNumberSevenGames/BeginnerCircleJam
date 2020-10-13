@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public player player;
+    public Player player;
 
     public Threat threat;
     public int baseStamina;
@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player.restoreStamina(1);
+        
     }
 
     public void dayEnd()
