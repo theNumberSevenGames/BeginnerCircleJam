@@ -28,7 +28,7 @@ public class Location : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        search();
+        //search();
     }
 
     public void search()

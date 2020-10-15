@@ -46,9 +46,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\Item.cs" />
      <Compile Include="Assets\Resources\Scripts\Location.cs" />
+     <Compile Include="Assets\Resources\Scripts\Player.cs" />
+     <Compile Include="Assets\Resources\Scripts\Syringe.cs" />
      <Compile Include="Assets\Resources\Scripts\Threat.cs" />
-     <Compile Include="Assets\Resources\Scripts\player.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

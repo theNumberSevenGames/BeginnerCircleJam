@@ -7,10 +7,11 @@ public class GameManager : MonoBehaviour
     public Player player;
 
     public Threat threat;
+    
     public int baseStamina;
     void Start()
     {
-        
+        baseStamina = player.baseStamina;
     }
 
     // Update is called once per frame
@@ -22,8 +23,19 @@ public class GameManager : MonoBehaviour
     public void dayEnd()
     {
         //THREAT FUCKS YOU UP
+        player.decreaseDefense(threat.powerLevel);
 
-        //IF SURVIVE
-        player.restoreStamina(baseStamina);
+        if(player.baseDefense >= 0)
+        {
+            //TEXT DESCRIBING ACTION//
+            player.restoreStamina(baseStamina);
+            threat.increasePower();
+        }
+        else
+        {
+            //you die
+        }
+
+        
     }
 }

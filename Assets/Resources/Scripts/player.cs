@@ -6,13 +6,14 @@ public class Player : MonoBehaviour
 {
    
    public int stamina;
+   public int baseStamina;
    public int metal;
    public int energy;
    public int fuel;
 
    public int baseDefense; 
 
-   public List<GameObject> itemList = new List<GameObject>();
+   public List<Item> itemList = new List<Item>();
     
     void Start()
     {
@@ -22,7 +23,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(itemList[0]);
     }
 
     public void restoreStamina(int amount)
@@ -38,6 +39,11 @@ public class Player : MonoBehaviour
     public void increaseDefense(int amount)
     {
         this.baseDefense += amount;
+    }
+
+    public void decreaseDefense(int amount)
+    {
+        this.baseDefense -= amount;
     }
 
     public void addResources(string type, int amount)
@@ -70,5 +76,10 @@ public class Player : MonoBehaviour
         {
             this.fuel -= amount;
         }
+    }
+
+    public void addItem(Item item)
+    {
+        itemList.Add(item);
     }
 }
